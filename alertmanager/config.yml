@@ -1,0 +1,19 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1h
+  receiver: 'telegram'
+
+receivers:
+  - name: 'telegram'
+    telegram_configs:
+      - bot_token: '7259389805:AAFCbZvq4mp02Ms9c2AcJAeM0-vN_dmg_pw'
+        chat_id: -4090313745
+        message: '{{ template "telegram.default.message" . }}'
+
+templates:
+  - '/etc/alertmanager/alertmanager.tmpl'

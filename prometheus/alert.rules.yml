@@ -1,0 +1,31 @@
+groups:
+  - name: blackbox
+    rules:
+      - alert: BlackboxTargetDown
+        expr: probe_success{target="http://ya.ru"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Blackbox target {{ $labels.instance }} is down"
+          description: "The blackbox target at {{ $labels.instance }} has failed. Response status: {{ $labels.status_code }}"
+
+  - name: nginx-alerts
+    rules:
+      - alert: NginxInstanceDown
+        expr: probe_success{instance="nginx-01:80"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Nginx instance nginx-01 is down"
+          description: "Nginx instance nginx-01 has been down for more than 1 minute."
+
+      - alert: NginxInstanceDown
+        expr: probe_success{instance="nginx-02:80"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Nginx instance nginx-02 is down"
+          description: "Nginx instance nginx-02 has been down for more than 1 minute."
