@@ -27,8 +27,10 @@ alertmanager для алертов в телеграм
 
 
 скриншот алерта при внезапном исзезновении доступа в интернет:
+
 ![image](https://github.com/user-attachments/assets/d4e55978-8fff-418f-b90c-91ae49cbd243)
 
 
 скриншот алерта при остановке контейнера nginx:
+
 ![image](https://github.com/user-attachments/assets/d3447fdd-13f9-4bf6-9092-5756b6eccf3a)
