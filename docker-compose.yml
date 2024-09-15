@@ -105,9 +105,6 @@ services:
     command:
       - '--config.file=/etc/alertmanager/config.yml'
 
-volumes:
-  grafana-storage:
-
 networks:
   monitoring-network:
 
