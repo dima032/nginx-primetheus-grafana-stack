@@ -10,7 +10,7 @@ node-exporter для сбора и интерпритации системных
 
 nginx-exporter для сбора и интерпритации метрик nginx
 
-blackbox-exporter blackbox-exporter метрик связанных с сетевыми взаимодейтвиями
+blackbox-exporter метрик связанных с сетевыми взаимодейтвиями
 
 alertmanager для алертов в телеграм
 
